@@ -1,0 +1,17 @@
+<html>
+<head>
+<script>
+function reload_iframe() {
+  var iframe = window.parent.document.getElementById('sandboxed-iframe');
+  iframe.sandbox = 'allow-scripts allow-same-origin allow-popups';
+  iframe.src = iframe.src;
+}
+</script>
+</head>
+<body>
+1- <a href="javascript:alert('It works!')">Alert</a>
+<br>2- <a href="javascript:window.open('http://example.com')">Popup</a>
+<br><hr>
+3- <a href="javascript:reload_iframe()">Reload iframe</a>
+</body>
+</html>
